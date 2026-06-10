@@ -12,10 +12,7 @@
 }
 
 .resume-container h2 {
-  background: linear-gradient(90deg, #38bdf8, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
   margin-bottom: 30px;
 }
 
@@ -95,8 +92,8 @@
   width: 50px;
   height: 50px;
   margin: 0 auto 20px;
-  border: 4px solid rgba(56, 189, 248, 0.2);
-  border-top-color: #38bdf8;
+  border: 4px solid rgba(6, 182, 212, 0.2);
+  border-top-color: var(--accent-cyan);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -107,8 +104,8 @@
 
 .progress-bar {
   width: 100%;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -116,13 +113,14 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
   border-radius: 4px;
   transition: width 0.3s ease;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.5);
 }
 
 .loading-text {
-  color: #94a3b8;
+  color: var(--text-secondary);
   font-size: 14px;
   margin: 0;
 }
@@ -172,48 +170,51 @@
 }
 
 .modal h2 {
-  background: linear-gradient(90deg, #38bdf8, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .modal h3 {
-  color: #1e293b;
-  border-left: 4px solid #38bdf8;
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent-cyan);
   padding-left: 12px;
   margin-top: 25px;
   margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
 }
 
 .modal ul {
-  background: rgba(56, 189, 248, 0.05);
+  background: rgba(6, 182, 212, 0.05);
   border-radius: 8px;
   padding: 15px 20px 15px 35px;
+  border: 1px solid rgba(6, 182, 212, 0.1);
 }
 
 .modal li {
-  color: #334155;
+  color: var(--text-secondary);
   line-height: 1.8;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 .modal p {
-  color: #475569;
+  color: var(--text-secondary);
   line-height: 1.7;
 }
 
 .modal strong {
-  color: #1e293b;
-  font-weight: 600;
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .modal button {
-  background: linear-gradient(90deg, #ef4444, #dc2626);
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: var(--bg-primary);
   margin-top: 30px;
+  font-weight: 700;
 }
 
 .modal button:hover {
-  background: linear-gradient(90deg, #dc2626, #b91c1c);
-  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+  box-shadow: 0 12px 32px rgba(6, 182, 212, 0.35);
 }
