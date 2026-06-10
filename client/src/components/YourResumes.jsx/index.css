@@ -1,0 +1,219 @@
+.resume-container {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.resume-container h2 {
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 30px;
+}
+
+.resume-container input[type="file"] {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px dashed rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resume-container input[type="file"]:hover {
+  border-color: rgba(56, 189, 248, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.resume-container button {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-container button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.resume-container button:hover::before {
+  left: 100%;
+}
+
+.resume-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+}
+
+.resume-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.resume-container button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Loading Container */
+.loading-container {
+  margin: 30px auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  border: 4px solid rgba(56, 189, 248, 0.2);
+  border-top-color: #38bdf8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.loading-text {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 0;
+}
+
+.resume-container .error {
+  color: #ef4444;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.modal-overlay {
+  animation: fadeInOverlay 0.3s ease;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal h2 {
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal h3 {
+  color: #1e293b;
+  border-left: 4px solid #38bdf8;
+  padding-left: 12px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.modal ul {
+  background: rgba(56, 189, 248, 0.05);
+  border-radius: 8px;
+  padding: 15px 20px 15px 35px;
+}
+
+.modal li {
+  color: #334155;
+  line-height: 1.8;
+  margin: 8px 0;
+}
+
+.modal p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.modal strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.modal button {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  margin-top: 30px;
+}
+
+.modal button:hover {
+  background: linear-gradient(90deg, #dc2626, #b91c1c);
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+}
